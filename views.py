@@ -1,7 +1,6 @@
-from flask import request, render_template, Blueprint
+from flask import request, render_template
 from . import app
 from .library.systeminfo import *
-import psutil, platform
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
