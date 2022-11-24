@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}Login{% endblock %}
+
+{% block head %}{% endblock %}
+
+{% block content %}<div class="loginWindow" style="width: 300px">
+  <div class="title-bar">
+      <div class="title-bar-text">Login - Damtay Corp.</div>
+    <div class="title-bar-controls">
+      <button aria-label="Help"></button>
+    </div>
+  </div>
+  <div class="window-body">
+      <form method="POST" action="dashboard">
+          <div class="field-row-stacked">
+              <input id="text22" type="password" placeholder="Damtay Secret Code" name="damtayCode" style="text-align:center" required/>
+              <button type="submit">Log In</button>
+          </div>
+      </form>
+  </div>
+    <div class="status-bar">
+        <p class="status-bar-field">Secret code contained by being member of "Hruo Damtay"</p>
+    </div>
+</div>
+{% endblock %}
