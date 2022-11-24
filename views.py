@@ -1,6 +1,10 @@
-from flask import request, render_template
+from flask import request, render_template, redirect
 from . import app
 from .library.systeminfo import *
+
+@app.route("/", methods=["GET", "POST"])
+def index():
+    return redirect("/login", code=302)
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
